@@ -1,0 +1,219 @@
+.container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .nav {
+    margin-top: 0.5%;
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .MsgCard {
+    cursor: pointer;
+  }
+  .messagefalse {
+    display: none;
+  }
+  .messagetrue {
+    display: block;
+  }
+  .messages {
+    display: flex;
+    flex-direction: row;
+    flex: 30%;
+    text-align: center;
+  }
+  .messages > * {
+    flex: 50%;
+    padding: 7px 10px;
+  }
+  .single {
+    padding: 5px 30px;
+    flex: 70%;
+    border: 1px solid #b4b3b3;
+    margin-left: 1%;
+  }
+  .inbox {
+    border-top: 1px solid #b4b3b3;
+    border-left: 1px solid #b4b3b3;
+    border-bottom: 1px solid #b4b3b3;
+  }
+  .blue {
+    background-color: #023456;
+    color: white;
+    border: #023456;
+  }
+  /*start message*/
+  .msgContianer {
+    color: #838282;
+    width: 70%;
+    float: right;
+    padding: 0px 30px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .msgHead {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+  }
+  .email {
+    color: #023456;
+    font-weight: bold;
+  }
+  .msgDate {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #616161;
+  }
+  .note {
+    margin-top: 30px;
+    color: #d9d9d9;
+  }
+  .hr {
+    background-color: #eaeaea;
+    height: 3px;
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .msgDelete {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    float: right;
+    border: none;
+    padding: 8px 35px;
+    cursor: pointer;
+  }
+  .save {
+    color: #005085;
+    margin-top: 30px;
+  }
+  /*end message*/
+  /*start list*/
+  
+  .inputtrue {
+    width: 120px;
+    height: 25px;
+    display: inline;
+    transition: all 0.5s;
+  }
+  .inputfalse {
+    display: none;
+    transition: all 0.5s;
+  }
+  input[type="search"] {
+    background: #fff;
+    padding: 0.5rem 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    transition: all 0.5s;
+  }
+  
+  .listFoot,
+  .listHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    color: #838282 !important;
+  }
+  .listHead {
+    padding: 5px;
+    background-color: #ededed;
+  }
+  .listFoot {
+    display: flex;
+    margin: auto;
+    padding: 40px 40px;
+    justify-content: center;
+  }
+  .search {
+    display: flex;
+  }
+  .search img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 2%;
+  }
+  .msgNum {
+    background-color: yellow;
+    border-radius: 4px;
+    padding: 1px;
+  }
+  /*end list*/
+  /*start msg card*/
+  .msgIcon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  .titletrue {
+    color: #a5a5a5;
+    margin-bottom: 2px;
+  }
+  .titlefalse {
+    font-size: 11px;
+    color: #585858;
+    margin-bottom: 2px;
+    font-weight: bold;
+  }
+  .text {
+    font-size: 11px;
+    color: #a5a5a5;
+    margin-top: 0px;
+    font-weight: 600;
+  }
+  .Date {
+    margin-top: 10px;
+    font-size: 10px;
+  
+  }
+  .Date p {
+    margin: 0px;
+    padding: 0px;
+    color: #4b4a4a;
+    font-weight: bold;
+  }
+  .listContianer {
+    border: 1px solid #b4b3b3;
+    width: 29.7%;
+  }
+  .msgBody {
+    padding: 0px 5px;
+    display: -moz-box;
+    display: flex;
+    -moz-box-pack: justify;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+  .hrMsg {
+    background-color: #eaeaea;
+    height: 2px;
+    width: 95%;
+    border: none;
+    margin: auto;
+    margin: 0px;
+  }
+  /*end msg card*/
