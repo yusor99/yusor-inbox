@@ -10,7 +10,7 @@ const Home = () => {
   const [numOfMsg, setNumOfMsg] = useState(0);
   const [show, setShow] = useState(false);
   const [msgShow, setMsgShow] = useState(false);
- const take=2;
+ const take=12;
 
   const toggle = () => {
     setShow(!show);
@@ -37,7 +37,7 @@ const Home = () => {
       if (err) throw err;
       else {
         setNumOfMsg(result.count);
-        setDatamsg(data);
+        setDatamsg(result.results);
         console.log(result.results);
       }
     });
@@ -62,8 +62,8 @@ const Home = () => {
         </div>
 
         <Message item={selectItem} onDelete={filterData} msgShow1={msgShow} />
-        <div className="listContianer">
-          <div className="listHead">
+        <div className="listContianer ">
+        <div className="listHead">
             <div>
               Messages <span className="msgNum">{datamsg.length}</span> of Total
               ({numOfMsg})
@@ -80,8 +80,10 @@ const Home = () => {
               <img src="/search.png" alt="search" onClick={toggle}></img>
             </div>
           </div>
-          <section className="container blog-list">
-            {datamsg.map((msg) => (
+          <div className="blog-list">
+         
+          <section className="container " >
+        <div >    {datamsg.map((msg) => (
               <div key={msg.id}>
                 <MsgCard
                   onPress={(item) => {
@@ -92,9 +94,9 @@ const Home = () => {
                   item={msg}
                 />
               </div>
-            ))}
+            ))}</div>
           </section>
-
+          </div>
           {numOfMsg > datamsg.length && (
             <div className="listFoot" onClick={loadMore}>
               load more ...
