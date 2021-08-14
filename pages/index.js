@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Message from "../components/Message";
+import Message from "../components/message";
 import { useEffect, useState } from "react";
 import { apiList } from "../pages/api";
 import MsgCard from "../components/msgCard";
@@ -10,7 +10,7 @@ const Home = () => {
   const [numOfMsg, setNumOfMsg] = useState(0);
   const [show, setShow] = useState(false);
   const [msgShow, setMsgShow] = useState(false);
- const take=12;
+  const take = 12;
 
   const toggle = () => {
     setShow(!show);
@@ -63,7 +63,7 @@ const Home = () => {
 
         <Message item={selectItem} onDelete={filterData} msgShow1={msgShow} />
         <div className="listContianer ">
-        <div className="listHead">
+          <div className="listHead">
             <div>
               Messages <span className="msgNum">{datamsg.length}</span> of Total
               ({numOfMsg})
@@ -81,21 +81,23 @@ const Home = () => {
             </div>
           </div>
           <div className="blog-list">
-         
-          <section className="container " >
-        <div >    {datamsg.map((msg) => (
-              <div key={msg.id}>
-                <MsgCard
-                  onPress={(item) => {
-                    setselectItem(item);
+            <section className="container ">
+              <div>
+                {" "}
+                {datamsg.map((msg) => (
+                  <div key={msg.id}>
+                    <MsgCard
+                      onPress={(item) => {
+                        setselectItem(item);
 
-                    setMsgShow(true);
-                  }}
-                  item={msg}
-                />
+                        setMsgShow(true);
+                      }}
+                      item={msg}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}</div>
-          </section>
+            </section>
           </div>
           {numOfMsg > datamsg.length && (
             <div className="listFoot" onClick={loadMore}>
